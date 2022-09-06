@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import getMockData from "../helpers/getMockData";
 
-const initialState = {};
+const initialState = getMockData();
 
-const slice = createSlice({
-	name: "slice",
+const logs = createSlice({
+	name: "logs",
 	initialState,
 	reducers: {
 		setSlice(state, action) {
@@ -12,6 +13,6 @@ const slice = createSlice({
 	},
 });
 
-export const sliceActions = slice.actions;
+export const sliceActions = logs.actions;
 
-export default slice.reducer;
+export default logs.reducer;
