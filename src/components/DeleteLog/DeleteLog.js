@@ -3,7 +3,7 @@ import { logActions } from "../../store/logsSlice";
 import Button from "../Button/Button";
 import styles from "./DeleteLog.module.scss";
 
-const DeleteLog = ({ date, index, logText, log, closeBackDrop }) => {
+const DeleteLog = ({ date, index, logText, closeBackDrop }) => {
 	const dispatch = useDispatch(),
 		handleDelete = () => {
 			closeBackDrop();
