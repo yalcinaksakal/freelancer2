@@ -11,6 +11,7 @@ const getMockData = () => {
 		start,
 		end,
 		key;
+	now = now.setDate(now.getDate() - 1);
 	for (let d = new Date(2021, 1, 1); d < now; d.setDate(d.getDate() + 1)) {
 		start = Math.floor(Math.random() * 900);
 		end = start + 15;

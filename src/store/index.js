@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import sliceReducer from "./slice";
+import logsReducer from "./logsSlice";
 
 const loggerMiddleware = store => next => action => {
 		if (!action.type) {
@@ -26,7 +26,7 @@ const loggerMiddleware = store => next => action => {
 		getDefaultMiddleware().concat(loggerMiddleware),
 	store = configureStore({
 		reducer: {
-			slcie: sliceReducer,
+			logs: logsReducer,
 		},
 		middleware:
 			process.env.NODE_ENV === "production"

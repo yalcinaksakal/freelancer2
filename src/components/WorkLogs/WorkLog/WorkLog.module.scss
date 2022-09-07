@@ -1,0 +1,31 @@
+.log {
+	display: flex;
+	width: 70%;
+	min-width: 300px;
+	background-color: rgb(218, 242, 234);
+	margin: 5px;
+	transition: all 0.2s ease-out;
+	align-items: center;
+	cursor: default;
+	* {
+		margin: 0 3px;
+		font-weight: bold;
+	}
+	.no {
+		width: 30px;
+		border-right: solid 1px white;
+		text-align: right;
+		padding-right: 5px;
+	}
+	.date {
+		width: calc(100% - 130px);
+	}
+	.total {
+		width: 100px;
+		border-left: solid 1px white;
+	}
+	&:hover {
+		background-color: rgb(139, 154, 149);
+		color: white;
+	}
+}

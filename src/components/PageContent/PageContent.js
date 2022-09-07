@@ -1,8 +1,10 @@
+import WorkLogs from "../WorkLogs/WorkLogs";
+
 const PageContent = ({ page }) => {
 	let content;
 	switch (page) {
 		case "logs":
-			content = <div>log</div>;
+			content = <WorkLogs />;
 			break;
 		case "add":
 			content = <div>add</div>;
