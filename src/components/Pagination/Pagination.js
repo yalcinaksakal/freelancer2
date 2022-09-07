@@ -1,5 +1,6 @@
 import styles from "./Pagination.module.scss";
 import pageArrConstructor from "../../helpers/pageArrConstructor";
+
 const Pagination = ({ numberOfPages, currentPage, clicked }) => {
 	const pageArr = pageArrConstructor(numberOfPages, currentPage);
 
