@@ -21,17 +21,21 @@ const WorkLogs = () => {
 				numberOfPages={numberOfPages}
 				clicked={changeCurPage}
 			/>
-			<Heading />
-			{logs
-				.slice((curPage - 1) * ITEMS_PER_PAGE, curPage * ITEMS_PER_PAGE)
-				.map((log, index) => (
-					<WorkLog
-						key={index}
-						date={log[0]}
-						logs={log[1]}
-						no={index + 1 + (curPage - 1) * ITEMS_PER_PAGE}
-					/>
-				))}
+			{logs.length && <Heading />}
+			{logs.length ? (
+				logs
+					.slice((curPage - 1) * ITEMS_PER_PAGE, curPage * ITEMS_PER_PAGE)
+					.map((log, index) => (
+						<WorkLog
+							key={index}
+							date={log[0]}
+							logs={log[1]}
+							no={index + 1 + (curPage - 1) * ITEMS_PER_PAGE}
+						/>
+					))
+			) : (
+				<h6>There is not any log.</h6>
+			)}
 		</div>
 	);
 };

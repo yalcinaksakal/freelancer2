@@ -2,7 +2,7 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	margin: 3px;
+	margin: 3px 0;
 	align-items: center;
 	cursor: default;
 
@@ -11,7 +11,8 @@
 	}
 	.buttons {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
+
 		@media (max-width: 400px) {
 			flex-direction: column;
 		}

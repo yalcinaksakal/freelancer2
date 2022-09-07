@@ -24,7 +24,9 @@
 		}
 	}
 
-	&.edit {
+	&.edit,
+	&.add,
+	&.cancel {
 		&:hover {
 			background-color: black;
 			color: white;

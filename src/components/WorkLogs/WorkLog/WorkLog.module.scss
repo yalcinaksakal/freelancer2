@@ -2,6 +2,7 @@
 	display: flex;
 	width: 70%;
 	min-height: 100px;
+	max-width: 700px;
 	background: rgb(218, 242, 234);
 	margin: 3px;
 	transition: all 0.1s ease-out;
@@ -23,6 +24,7 @@
 	.date {
 		width: calc(100% - 140px);
 		height: 100%;
+		min-height: 100px;
 		border-right: solid 1px darkgray;
 		border-left: solid 1px darkgray;
 		text-align: center;
