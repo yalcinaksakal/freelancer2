@@ -1,3 +1,4 @@
+import AddWorkLoad from "../AddWorkLoad/AddWorkLoad";
 import WorkLogs from "../WorkLogs/WorkLogs";
 
 const PageContent = ({ page }) => {
@@ -7,7 +8,7 @@ const PageContent = ({ page }) => {
 			content = <WorkLogs />;
 			break;
 		case "add":
-			content = <div>add</div>;
+			content = <AddWorkLoad />;
 			break;
 		case "eval":
 			content = <div>eval</div>;

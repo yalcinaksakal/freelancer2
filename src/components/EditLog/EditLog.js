@@ -17,6 +17,7 @@ const EditLog = ({ date, index, logText, log, closeBackDrop }) => {
 				setErr("End can't be earlier than start!");
 				return;
 			}
+			setErr("");
 			dispatch(logActions.editLog({ date, index, start, end }));
 			closeBackDrop();
 		};

@@ -19,6 +19,13 @@ const logs = createSlice({
 			state.logs[date][index] = [getMinutes(start), getMinutes(end)];
 			state.logs[date] = sortAndCombine([...state.logs[date]]);
 		},
+		addLog(state, action) {
+			const { date, start, end } = action.payload;
+			state.logs[date]
+				? state.logs[date].push([start, end])
+				: (state.logs[date] = [[start, end]]);
+			state.logs[date] = sortAndCombine([...state.logs[date]]);
+		},
 	},
 });
 
