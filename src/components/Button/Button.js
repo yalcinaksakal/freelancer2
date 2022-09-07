@@ -1,9 +1,9 @@
 import "./Button.styles.scss";
 
-const Button = ({ children, buttonType, ...otherProps }) => {
+const Button = ({ buttonType, ...otherProps }) => {
 	return (
 		<button className={`button-container ${buttonType}`} {...otherProps}>
-			{children}
+			{buttonType.toUpperCase()}
 		</button>
 	);
 };

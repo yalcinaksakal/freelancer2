@@ -1,29 +1,35 @@
 .log {
 	display: flex;
 	width: 70%;
-	min-width: 300px;
 	background: rgb(218, 242, 234);
 	margin: 3px;
 	transition: all 0.1s ease-out;
 	align-items: center;
 	cursor: default;
+	@media (max-width: 500px) {
+		width: calc(100vw - 50px);
+	}
+
 	* {
-		margin: 0 3px;
 		font-weight: bold;
 	}
 	.no {
 		width: 40px;
-		border-right: solid 1px white;
 		text-align: right;
 		padding-right: 8px;
 	}
 	.date {
 		width: calc(100% - 140px);
+		border-right: solid 1px darkgray;
+		border-left: solid 1px darkgray;
 		text-align: center;
+		.times {
+			margin: 5px;
+		}
 	}
 	.total {
 		width: 100px;
-		border-left: solid 1px white;
+		font-size: 10px;
 		text-align: center;
 	}
 	&:hover {

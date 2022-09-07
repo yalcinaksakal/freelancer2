@@ -2,9 +2,11 @@
 	display: flex;
 	width: 70%;
 	min-width: 300px;
-
 	margin: 3px;
 
+	@media (max-width: 500px) {
+		width: calc(100vw - 50px);
+	}
 	* {
 		margin: 0 3px;
 		font-weight: bold;

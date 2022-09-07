@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin: 3px;
+	align-items: center;
+	cursor: default;
+
+	&:hover {
+		background: rgb(90, 99, 96);
+	}
+	.buttons {
+		display: flex;
+		justify-content: space-around;
+		@media (max-width: 400px) {
+			flex-direction: column;
+		}
+	}
+	.time {
+		font-size: 10px;
+		font-weight: lighter;
+	}
+}
