@@ -19,7 +19,7 @@ const WorkLog = ({ logs, date, no }) => {
 							key={i}
 							log={log}
 							date={date}
-							index={no - 1}
+							index={i}
 							changeSlot={setActiveSlot}
 						/>
 					))}

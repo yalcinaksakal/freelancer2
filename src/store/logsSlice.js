@@ -7,12 +7,14 @@ const logs = createSlice({
 	name: "logs",
 	initialState,
 	reducers: {
-		setSlice(state, action) {
-			// state.prop = action.payload;
+		deleteLog(state, action) {
+			const { date, index } = action.payload;
+			state.logs[date].splice(index, 1);
+			!state.logs[date].length && delete state.logs[date];
 		},
 	},
 });
 
-export const sliceActions = logs.actions;
+export const logActions = logs.actions;
 
 export default logs.reducer;
