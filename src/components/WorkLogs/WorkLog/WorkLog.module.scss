@@ -1,11 +1,13 @@
 .log {
 	display: flex;
 	width: 70%;
+	min-height: 100px;
 	background: rgb(218, 242, 234);
 	margin: 3px;
 	transition: all 0.1s ease-out;
 	align-items: center;
 	cursor: default;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	@media (max-width: 500px) {
 		width: calc(100vw - 50px);
 	}
@@ -20,6 +22,7 @@
 	}
 	.date {
 		width: calc(100% - 140px);
+		height: 100%;
 		border-right: solid 1px darkgray;
 		border-left: solid 1px darkgray;
 		text-align: center;
@@ -28,12 +31,18 @@
 		}
 	}
 	.total {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		width: 100px;
 		font-size: 10px;
-		text-align: center;
+		.text {
+			transform: translateY(-35px);
+		}
 	}
 	&:hover {
-		background: rgb(139, 154, 149);
+		background: rgb(113, 124, 120);
 		color: white;
 	}
 }

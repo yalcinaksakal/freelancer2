@@ -22,6 +22,7 @@ const getMockData = () => {
 				if (start >= fullDay) continue;
 				end = start + Math.floor(Math.random() * 360) + 60;
 				if (end >= 24 * 60) end = fullDay - 1;
+				if (end - start < 20) continue;
 				data.logs[key]
 					? data.logs[key].push([start, end])
 					: (data.logs[key] = [[start, end]]);

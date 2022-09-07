@@ -1,9 +1,9 @@
 import styles from "./LogItem.module.scss";
 import Button from "../../../Button/Button";
 import { getDuration, getTime } from "../../../../helpers/getTime";
-const LogItem = ({ log, date }) => {
+const LogItem = ({ log, date, changeSlot, index }) => {
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} onMouseEnter={() => changeSlot(index)}>
 			<div className={styles.time}>
 				{log.map(t => getTime(t)).join(" - ") +
 					" " +
